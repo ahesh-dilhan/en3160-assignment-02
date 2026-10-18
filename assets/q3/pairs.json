@@ -1,0 +1,22 @@
+[
+  {
+    "name": "modern_open_studio",
+    "background": "assets/q3/modern_house.jpg",
+    "poster_style": "studio",
+    "poster_size": [1400, 260],
+    "corners": [[215, 405], [953, 508], [953, 556], [215, 461]],
+    "alpha": 0.82,
+    "selection": "Manually selected from the 1600-pixel-wide photograph, TL/TR/BR/BL. Use select_corners.py to replace with mouse clicks.",
+    "rationale": "A fictional open-studio banner on one planar band of a modern facade; the slanted band makes perspective visible."
+  },
+  {
+    "name": "garage_community_garden",
+    "background": "assets/q3/suburban_house.jpg",
+    "poster_style": "garden",
+    "poster_size": [1000, 470],
+    "corners": [[454, 683], [782, 683], [786, 800], [450, 800]],
+    "alpha": 0.78,
+    "selection": "Manually selected within the double garage door, TL/TR/BR/BL. Use select_corners.py to replace with mouse clicks.",
+    "rationale": "A fictional community-garden notice on a nearly frontal planar garage door, contrasting with the more oblique facade banner."
+  }
+]
