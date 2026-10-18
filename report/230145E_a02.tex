@@ -4,6 +4,7 @@
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,graphicx,booktabs,tabularx,array,xcolor}
 \usepackage{fancyhdr,titlesec,caption,listings,microtype}
+\usepackage{eso-pic}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{colorlinks=true,allcolors=black,pdftitle={EN3160 Assignment 02: Fitting and Alignment},pdfauthor={Dilhan W.A.}}
 \pagestyle{fancy}
@@ -30,20 +31,27 @@
 \newcommand{\smallnote}[1]{{\footnotesize #1\par}}
 
 \begin{document}
-\thispagestyle{plain}
-\begin{center}
-\includegraphics[height=22mm]{figures/uom_logo_bw.png}\\[3pt]
-{\small\bfseries Department of Electronic \& Telecommunication Engineering}\\[2pt]
-{\small\bfseries University of Moratuwa, Sri Lanka}\\[7pt]
-{\large\bfseries EN3160 -- Assignment 02}\\[4pt]
-{\LARGE\bfseries Fitting and Alignment}\\[5pt]
-{\small Submitted by \quad\textbf{230145E \quad Dilhan W.A.}}\\[2pt]
-{\footnotesize 19 October 2026\quad$\vert$\quad
-\href{https://github.com/ahesh-dilhan}{GitHub: ahesh-dilhan}}
-\end{center}
-\vspace{-4pt}\hrule\vspace{3pt}
+% Cover coordinates and type sizes reproduce the supplied reference layout.
+% Coordinates are PDF points measured from the top of the A4 page.
+\thispagestyle{empty}
+\newcommand{\coverline}[4]{\put(297.6378,-#1){\makebox[0pt][c]{\fontsize{#2bp}{#2bp}\selectfont #3#4}}}
+\AddToShipoutPictureFG*{\setlength{\unitlength}{1bp}\AtPageUpperLeft{%
+\put(244.260,-230.376){\includegraphics[width=106.757bp,height=113.386bp]{figures/uom_logo.png}}
+\coverline{282.0}{11.9552}{\bfseries}{Department of Electronic \& Telecommunication Engineering}
+\coverline{314.1}{11.9552}{\bfseries}{University of Moratuwa, Sri Lanka}
+\coverline{381.0}{14.3462}{\bfseries}{EN3160 - Assignment 02}
+\coverline{435.2}{17.2154}{\bfseries}{Fitting and Alignment}
+\coverline{460.1}{17.2154}{\bfseries}{in Computer Vision}
+\coverline{510.1}{11.9552}{}{Submitted by}
+\coverline{542.2}{11.9552}{\bfseries}{230145E\quad Dilhan W.A.}
+\coverline{588.5}{11.9552}{}{B.Sc. Engineering - Semester 05}
+\coverline{620.6}{11.9552}{}{EN3160}
+\coverline{661.2}{11.9552}{}{October 19, 2026}
+}}
+\null\newpage
 
 \section{Sunflower detection using scale-space extrema}
+\smallnote{\textbf{Repository:} \url{https://github.com/ahesh-dilhan/en3160-assignment-02}}
 The supplied image is read with \texttt{cv.IMREAD\_REDUCED\_COLOR\_4}, giving
 $360\times360$ pixels. The detector targets dark central disks rather than
 irregular petal outlines. For darkness $D=1-I_{\mathrm{gray}}/255$, the response is
@@ -62,7 +70,7 @@ curvature ratio of at least 0.5 rejects elongated gaps. No Hough-circle detector
 
 \begin{center}
 \includegraphics[width=0.91\linewidth]{figures/sunflowers.png}
-\figcaption{Grayscale presentation of the input and \BlobCount{} detected candidates.
+\figcaption{Original-colour input and \BlobCount{} detected candidates.
 The five largest central disks are numbered in the right panel.}
 \end{center}
 \vspace{-4pt}
@@ -112,7 +120,7 @@ circle = ransac(X[remaining], "circle", rng,
 \includegraphics[width=\linewidth]{figures/ransac.png}
 \figcaption{All points, winning line and circle samples, sample hypotheses,
 refined models and their consensus sets. Markers and line styles distinguish
-models without colour.}
+models; all labels and text remain black.}
 \end{center}
 \vspace{-4pt}
 \begin{center}\small
@@ -151,7 +159,7 @@ blend weights are listed below.
 
 \begin{center}
 \includegraphics[width=\linewidth]{figures/composites.png}
-\figcaption{Two chosen architectural image pairs, shown in grayscale.
+\figcaption{Two chosen architectural image pairs, retaining their original colours.
 Each row compares the input photograph with its composited result.}
 \end{center}
 \vspace{-4pt}
@@ -200,7 +208,7 @@ warping all five targets.
 
 \begin{minipage}[t]{0.48\linewidth}\vspace{0pt}
 \includegraphics[width=\linewidth]{figures/pcb_matches.png}
-\captionof{figure}{ADAD1 to AECC1: black lines show accepted RANSAC matches.}
+\captionof{figure}{ADAD1 to AECC1: green lines show accepted RANSAC matches.}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
 \small
@@ -217,8 +225,8 @@ black warp borders from inflating the difference statistics.
 
 \begin{center}
 \includegraphics[width=\linewidth]{figures/pcb_differences.png}
-\figcaption{Mean absolute RGB differences, displayed in grayscale with a common
-0--100 range: black is zero and white is 100 or above. Blank white margins outside
+\figcaption{Mean absolute RGB differences, displayed with the original magma colour map
+over a common 0--100 range: dark is zero and pale yellow is 100 or above. Blank white margins outside
 the warped footprint are invalid overlap. Numerical metrics use the full raw values.}
 \end{center}
 \vspace{-4pt}

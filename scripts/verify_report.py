@@ -1,4 +1,4 @@
-"""Check page count, required text, embedded images and PDF drawing colours."""
+"""Check the separate cover, four content pages, repository link and black text/rules."""
 from pathlib import Path
 import sys
 
@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def verify(path):
     reader = PdfReader(path)
-    if len(reader.pages) != 4:
-        raise ValueError(f"Expected four pages including front page; got {len(reader.pages)}")
+    if len(reader.pages) != 5:
+        raise ValueError(f"Expected separate cover plus four content pages; got {len(reader.pages)}")
     text = "\n".join(page.extract_text() for page in reader.pages)
     for expected in ["Dilhan W.A.", "230145E", "University of Moratuwa", "EN3160", "ahesh-dilhan"]:
         if expected not in text:
@@ -35,14 +35,16 @@ def verify(path):
                 if id(obj) in checked_images:
                     continue
                 checked_images.add(id(obj))
-                if obj.get("/ColorSpace") != "/DeviceGray" and not obj.get("/ImageMask", False):
-                    raise ValueError(f"Unexpected image colour space: {obj.get('/ColorSpace')}")
             elif obj.get("/Subtype") == "/Form":
                 check_contents(obj, obj.get("/Resources", resources))
 
     for page in reader.pages:
         check_contents(page.get_contents(), page["/Resources"])
-    print(f"Verified {len(reader.pages)} pages, required identity text, and monochrome PDF resources.")
+    repo = 'https://github.com/ahesh-dilhan/en3160-assignment-02'
+    links = [str(a.get_object().get('/A', {}).get('/URI', '')) for p in reader.pages for a in p.get('/Annots', [])]
+    if repo not in links or 'https://github.com/ahesh-dilhan' in links:
+        raise ValueError('Expected repository link and no GitHub profile link')
+    print(f"Verified {len(reader.pages)} pages, repository link, and black PDF text/rules; colour images preserved.")
     return len(reader.pages)
 
 

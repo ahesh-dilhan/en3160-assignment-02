@@ -1,18 +1,22 @@
 # LaTeX report
 
 Main source: `230145E_a02.tex`. Measured tables are in `data.tex`; prepared
-monochrome figures are in `figures/`. These assets allow compilation without
+colour figures are in `figures/`. These assets allow compilation without
 access to the raw assignment images.
 
-The design uses a university title block, Computer Modern serif typography,
-black text and rules, unshaded tables, and numbered captions. The title block
-shares page one with Q1 to preserve the four-page maximum, including the front
-page. Photographs are grayscale; plots use black markers and line patterns.
-Hyperlinks print black.
+The design uses a separate cover matching the reference's measured A4 positions,
+font sizes, logo placement, and centred text hierarchy. Course/title/date are
+adapted to this assignment. Computer Modern serif text, layout rules, tables,
+captions and hyperlinks are black. Images, the crest and plotted data retain
+colour. The GitHub link points to the assignment repository, not the profile.
+
+This version has five pages: the explicitly requested separate cover plus four
+content pages. The assignment brief's four-page total limit therefore needs to
+be considered before submission; this layout follows the user's cover request.
 
 The crest was supplied in `C:/Users/User/Downloads/uom_logo.png`, copied to
-`assets/report/uom_logo_original.png`, composited on white, and converted to
-black and white. It is university identity artwork, not original project artwork.
+`assets/report/uom_logo_original.png` and composited on white with its original
+colours. It is university identity artwork, not original project artwork.
 The sample PDF was used as a visual reference only; its course content was not copied.
 
 From the project root:
@@ -23,7 +27,7 @@ From the project root:
 
 The script refreshes figures/tables from `outputs/`, compiles with the local
 Tectonic compiler (or one on PATH), and validates page count, identity text,
-and PDF colours. The first Tectonic run downloads TeX resources. This workspace
+repository URL and black PDF text/rules while allowing colour images. The first Tectonic run downloads TeX resources. This workspace
 uses Tectonic 0.17.0. Output: `output/pdf/230145E_a02.pdf`.
 
 To compile with the prepared figures, from this folder:
