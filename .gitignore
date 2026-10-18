@@ -1,0 +1,16 @@
+# Local source materials and extracted data
+/en3160_assignment_02.pdf
+/a2images.zip
+/images/
+/tmp/
+
+# Python and editor state
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.vscode/
+
+# Generated experimental outputs; select final figures deliberately
+/outputs/
