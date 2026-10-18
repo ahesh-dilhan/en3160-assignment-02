@@ -166,8 +166,8 @@ def fit_summary(points, fit, kind):
                 precision=true_positives/int(fit.inliers.sum()), recall=true_positives/50)
 
 
-def plot_fits(points, fits, path, title):
-    fig, ax = plt.subplots(figsize=(8, 8), layout="constrained")
+def plot_fits(points, fits, path, title, compact=False):
+    fig, ax = plt.subplots(figsize=(8, 5.4) if compact else (8, 8), layout="constrained")
     ax.scatter(*points.T, c="#bbc1cb", s=21, label="All 100 points")
     x = np.array([-15, 17])
     ax.plot(x, -x+2, "--", color="#687888", lw=1, label="Ground-truth line")
@@ -189,7 +189,10 @@ def plot_fits(points, fits, path, title):
                                        linestyle=style, color=colour, lw=1.8, label=label))
     ax.set(xlim=(-15, 17), ylim=(-14, 17), xlabel="x", ylabel="y", title=title)
     ax.set_aspect("equal"); ax.grid(alpha=.15)
-    ax.legend(fontsize=8, loc="upper right")
+    if compact:
+        ax.legend(fontsize=7.5, loc="upper left", bbox_to_anchor=(1.01, 1))
+    else:
+        ax.legend(fontsize=8, loc="upper right")
     fig.savefig(path, dpi=180); plt.close(fig)
 
 

@@ -41,7 +41,7 @@ def warp_and_difference(source, template, H):
 
 
 def register(source, template, template_features=None, max_side=1600,
-             ratio=0.72, reprojection_threshold=3.0):
+             ratio=0.72, reprojection_threshold=3.0, match_colour=(60, 220, 100)):
     small_source, source_scale = resize_for_features(source, max_side)
     small_template, template_scale = resize_for_features(template, max_side)
     sift = cv.SIFT_create(nfeatures=8000)
@@ -65,7 +65,7 @@ def register(source, template, template_features=None, max_side=1600,
     aligned, difference, valid = warp_and_difference(source, template, H)
     matches = cv.drawMatches(small_source, source_keypoints, small_template, template_keypoints,
         good, None, matchesMask=inliers.astype(int).tolist(),
-        matchColor=(60, 220, 100), flags=cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+        matchColor=match_colour, flags=cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
     inlier_hull = cv.convexHull(template_points[inliers])
     coverage = cv.contourArea(inlier_hull)/(small_template.shape[0]*small_template.shape[1])
     metrics = dict(source_keypoints=len(source_keypoints), template_keypoints=len(template_keypoints),

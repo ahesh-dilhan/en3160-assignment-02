@@ -16,7 +16,8 @@ planar image compositing, and SIFT-based PCB registration.
 - Implemented and executed all four experiment pipelines.
 - Validated the geometry with ten automated tests.
 - Generated parameters, figures, matches, differences, and fitting-order comparisons.
-- Published the initial repository; report assembly and final verification are in progress.
+- Published the initial repository. The report is now authored in LaTeX with a
+  monochrome university title block, black typography and rules, and grayscale figures.
 
 ## Local data preparation
 
@@ -60,6 +61,18 @@ python scripts/select_corners.py --pair 1
 ```
 
 Click top-left, top-right, bottom-right, bottom-left, then rerun Q3.
+
+## LaTeX report
+
+Source and build instructions: [report/README.md](report/README.md).
+The four-page PDF includes the front-page university logo and title block.
+
+```powershell
+.\.runtime\python\python.exe scripts/build_report.py
+```
+
+To compile without rerunning experiments, use the prepared `report/figures/`
+and `report/data.tex` with the main [LaTeX source](report/230145E_a02.tex).
 
 ## Implementation
 
