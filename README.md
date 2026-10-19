@@ -16,8 +16,8 @@ planar image compositing, and SIFT-based PCB registration.
 - Implemented and executed all four experiment pipelines.
 - Validated the geometry with ten automated tests.
 - Generated parameters, figures, matches, differences, and fitting-order comparisons.
-- Published the repository. The report is authored in LaTeX with a separate
-  university cover matching the supplied sample, black typography/rules, and original-colour figures.
+- Published the repository. The report is authored in LaTeX with a compact
+  university heading on the first content page, black typography/rules, and original-colour figures.
 
 ## Local data preparation
 
@@ -89,8 +89,8 @@ Click top-left, top-right, bottom-right, bottom-left, then rerun Q3.
 ## LaTeX report
 
 Source and build instructions: [report/README.md](report/README.md).
-The PDF has a separate university cover and three content pages, meeting the
-four-page total limit while preserving the requested sample cover layout.
+The PDF has four content pages and no separate cover. A compact university logo
+and student-information heading share page one with Q1, meeting the four-page limit.
 
 ```powershell
 .\.runtime\python\python.exe scripts/build_report.py

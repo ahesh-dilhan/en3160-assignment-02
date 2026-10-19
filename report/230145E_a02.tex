@@ -4,7 +4,6 @@
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,graphicx,booktabs,tabularx,array,xcolor}
 \usepackage{fancyhdr,titlesec,caption,listings,microtype}
-\usepackage{eso-pic}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{colorlinks=true,allcolors=black,pdftitle={EN3160 Assignment 02: Fitting and Alignment},pdfauthor={Dilhan W.A.}}
 \pagestyle{fancy}
@@ -30,28 +29,23 @@
 \newcommand{\figcaption}[1]{\captionof{figure}{#1}}
 \newcommand{\smallnote}[1]{{\footnotesize #1\par}}
 
+
 \begin{document}
-% Cover coordinates and type sizes reproduce the supplied reference layout.
-% Coordinates are PDF points measured from the top of the A4 page.
-\thispagestyle{empty}
-\newcommand{\coverline}[4]{\put(297.6378,-#1){\makebox[0pt][c]{\fontsize{#2bp}{#2bp}\selectfont #3#4}}}
-\AddToShipoutPictureFG*{\setlength{\unitlength}{1bp}\AtPageUpperLeft{%
-\put(244.260,-230.376){\includegraphics[width=106.757bp,height=113.386bp]{figures/uom_logo.png}}
-\coverline{282.0}{11.9552}{\bfseries}{Department of Electronic \& Telecommunication Engineering}
-\coverline{314.1}{11.9552}{\bfseries}{University of Moratuwa, Sri Lanka}
-\coverline{381.0}{14.3462}{\bfseries}{EN3160 - Assignment 02}
-\coverline{435.2}{17.2154}{\bfseries}{Fitting and Alignment}
-\coverline{460.1}{17.2154}{\bfseries}{in Computer Vision}
-\coverline{510.1}{11.9552}{}{Submitted by}
-\coverline{542.2}{11.9552}{\bfseries}{230145E\quad Dilhan W.A.}
-\coverline{588.5}{11.9552}{}{B.Sc. Engineering - Semester 05}
-\coverline{620.6}{11.9552}{}{EN3160}
-\coverline{661.2}{11.9552}{}{October 19, 2026}
-}}
-\null\newpage
-
+\thispagestyle{plain}
+\begin{minipage}[c]{0.13\linewidth}
+\includegraphics[height=22mm]{figures/uom_logo.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.84\linewidth}
+{\small\bfseries University of Moratuwa, Sri Lanka}\par
+{\footnotesize Department of Electronic \& Telecommunication Engineering}\par
+\vspace{3pt}
+{\Large\bfseries EN3160 -- Fitting and Alignment}\par
+{\small Assignment 02\quad$\vert$\quad Dilhan W.A.\quad$\vert$\quad 230145E}\par
+{\footnotesize October 19, 2026}
+\end{minipage}
+\par\vspace{5pt}\hrule\vspace{3pt}
+\smallnote{\textbf{Repository:} \url{https://github.com/ahesh-dilhan/en3160-assignment-02}}
 \input{content.tex}
-
 \newpage
 \section{SIFT-based PCB registration and differences}
 \textbf{Registration.} The template is \texttt{AECC1.jpg}. SIFT extracts up to

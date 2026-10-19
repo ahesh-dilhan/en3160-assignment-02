@@ -4,15 +4,14 @@ Main source: `230145E_a02.tex`. Measured tables are in `data.tex`; prepared
 colour figures are in `figures/`. These assets allow compilation without
 access to the raw assignment images.
 
-The design uses a separate cover matching the reference's measured A4 positions,
-font sizes, logo placement, and centred text hierarchy. Course/title/date are
-adapted to this assignment. Computer Modern serif text, layout rules, tables,
+The design uses a compact university logo and student-information heading on
+the first content page, with no separate cover. Computer Modern serif text, layout rules, tables,
 captions and hyperlinks are black. Images, the crest and plotted data retain
 colour. The GitHub link points to the assignment repository, not the profile.
 
-The report has four pages total: the unchanged separate cover plus three
-content pages. Concise discussion, a side-by-side detection table, and a compact
-composite figure preserve required results without exceeding the page limit.
+The report has four content pages total, roughly one per question. Page one
+includes both the university heading and Q1. The final build verifies that
+assignment content appears on the first page and that no separate cover is added.
 
 The crest was supplied in `C:/Users/User/Downloads/uom_logo.png`, copied to
 `assets/report/uom_logo_original.png` and composited on white with its original

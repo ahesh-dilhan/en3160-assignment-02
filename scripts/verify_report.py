@@ -1,4 +1,4 @@
-"""Check the separate cover, three content pages, repository link and black text/rules."""
+"""Check four content pages, integrated first-page heading and black text/rules."""
 from pathlib import Path
 import sys
 
@@ -11,7 +11,9 @@ ROOT = Path(__file__).resolve().parents[1]
 def verify(path):
     reader = PdfReader(path)
     if len(reader.pages) != 4:
-        raise ValueError(f"Expected separate cover plus three content pages; got {len(reader.pages)}")
+        raise ValueError(f"Expected four pages without a separate cover; got {len(reader.pages)}")
+    if 'scale-space' not in reader.pages[0].extract_text():
+        raise ValueError('Page one must contain assignment content, not a separate cover')
     text = "\n".join(page.extract_text() for page in reader.pages)
     for expected in ["Dilhan W.A.", "230145E", "University of Moratuwa", "EN3160", "ahesh-dilhan"]:
         if expected not in text:
