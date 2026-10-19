@@ -1,4 +1,4 @@
-"""Check the separate cover, four content pages, repository link and black text/rules."""
+"""Check the separate cover, three content pages, repository link and black text/rules."""
 from pathlib import Path
 import sys
 
@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def verify(path):
     reader = PdfReader(path)
-    if len(reader.pages) != 5:
-        raise ValueError(f"Expected separate cover plus four content pages; got {len(reader.pages)}")
+    if len(reader.pages) != 4:
+        raise ValueError(f"Expected separate cover plus three content pages; got {len(reader.pages)}")
     text = "\n".join(page.extract_text() for page in reader.pages)
     for expected in ["Dilhan W.A.", "230145E", "University of Moratuwa", "EN3160", "ahesh-dilhan"]:
         if expected not in text:

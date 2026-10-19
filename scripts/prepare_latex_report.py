@@ -98,6 +98,13 @@ def composites(q3):
             title = "Modern facade" if row == 0 else "Garage door"
             axes[row, col].set_title(f"{title}: {'input' if col == 0 else 'composite'}", fontsize=9)
     fig.savefig(FIG / "composites.png", dpi=240); plt.close(fig)
+    fig, axes = plt.subplots(1, 2, figsize=(7, 2.55), layout="constrained")
+    for ax, pair in zip(axes, q3):
+        path = ROOT / f"outputs/q3/{pair['name']}/composite.jpg"
+        ax.imshow(cv.cvtColor(read_image(path), cv.COLOR_BGR2RGB))
+        ax.axis("off")
+        ax.set_title("Modern facade" if pair['poster_style'] == 'studio' else "Garage door", color="black", fontsize=9)
+    fig.savefig(FIG / "composites_compact.png", dpi=260); plt.close(fig)
 
 
 def pcb(q4):

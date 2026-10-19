@@ -89,8 +89,8 @@ Click top-left, top-right, bottom-right, bottom-left, then rerun Q3.
 ## LaTeX report
 
 Source and build instructions: [report/README.md](report/README.md).
-The PDF has a separate university cover and four content pages. This follows
-the requested sample cover layout and exceeds the brief's four-page total limit.
+The PDF has a separate university cover and three content pages, meeting the
+four-page total limit while preserving the requested sample cover layout.
 
 ```powershell
 .\.runtime\python\python.exe scripts/build_report.py

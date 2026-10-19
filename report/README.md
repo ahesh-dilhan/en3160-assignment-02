@@ -10,9 +10,9 @@ adapted to this assignment. Computer Modern serif text, layout rules, tables,
 captions and hyperlinks are black. Images, the crest and plotted data retain
 colour. The GitHub link points to the assignment repository, not the profile.
 
-This version has five pages: the explicitly requested separate cover plus four
-content pages. The assignment brief's four-page total limit therefore needs to
-be considered before submission; this layout follows the user's cover request.
+The report has four pages total: the unchanged separate cover plus three
+content pages. Concise discussion, a side-by-side detection table, and a compact
+composite figure preserve required results without exceeding the page limit.
 
 The crest was supplied in `C:/Users/User/Downloads/uom_logo.png`, copied to
 `assets/report/uom_logo_original.png` and composited on white with its original

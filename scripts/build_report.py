@@ -1,4 +1,4 @@
-"""Prepare colour figures, compile LaTeX, and validate cover plus four content pages."""
+"""Prepare colour figures, compile LaTeX, and validate cover plus three content pages."""
 import os
 from pathlib import Path
 import shutil
