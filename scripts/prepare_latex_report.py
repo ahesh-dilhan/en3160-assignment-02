@@ -1,5 +1,6 @@
 """Prepare original-colour figures with black labels and measured LaTeX tables."""
 import json
+import hashlib
 import os
 from pathlib import Path
 import sys
@@ -153,6 +154,21 @@ def tables(q1, q2, q3, q4):
 def main():
     FIG.mkdir(parents=True, exist_ok=True)
     q1, q2, q3, q4 = [load(task) for task in ["q1", "q2", "q3", "q4"]]
+    # Prevent stale or unrecorded corner selections from entering the report.
+    pairs = json.loads((ROOT / "assets/q3/pairs.json").read_text())
+    clicks = json.loads((ROOT / "assets/q3/corner_clicks.json").read_text())
+    saved_results = {row["name"]: row for row in q3}
+    for pair in pairs:
+        evidence = clicks[pair["name"]]
+        events = evidence["click_events"]
+        if len(events) != 4 or [event["point"] for event in events] != pair["corners"]:
+            raise RuntimeError(f"Four matching corner clicks required for {pair['name']}")
+        if evidence["corners"] != pair["corners"]:
+            raise RuntimeError("Click evidence differs from the selected coordinates")
+        if hashlib.sha256((ROOT / pair["background"]).read_bytes()).hexdigest() != evidence["image_sha256"]:
+            raise RuntimeError("Q3 image differs from the image used for corner selection")
+        if saved_results[pair["name"]]["corners"] != pair["corners"]:
+            raise RuntimeError("Q3 results are stale: rerun scripts/run_assignment.py --task q3")
     logo(); sunflower(q1); ransac(q2); composites(q3); pcb(q4); tables(q1, q2, q3, q4)
     print(f"Prepared original-colour figures with black labels in {ROOT / 'report'}")
 

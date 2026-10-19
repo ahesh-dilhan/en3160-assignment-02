@@ -11,7 +11,8 @@ alongside the code and report for review and reproducibility.
   0-19 in `results.json`.
 - **q3:** for each chosen pair, the original overlay graphic, composite,
   coverage mask, selected coordinates and homography. The coordinates were
-  selected from visual inspection, not recorded mouse clicks.
+  recorded using four mouse clicks per image; the events and original-image
+  checksums are saved in `assets/q3/corner_clicks.json`.
 - **q4:** five complete target folders, each containing `aligned.jpg`,
   `matches.jpg`, `difference.png`, `valid_mask.png`, `overlay.jpg`, and
   `metrics.json`. The overview, combined CSV and combined JSON are also included.

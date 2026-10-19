@@ -16,6 +16,7 @@ planar image compositing, and SIFT-based PCB registration.
 - Implemented and executed all four experiment pipelines.
 - Validated the geometry with ten automated tests.
 - Generated parameters, figures, matches, differences, and fitting-order comparisons.
+- Completed Q3 with four recorded mouse clicks per image and regenerated results.
 - Published the repository. The report is authored in LaTeX with a compact
   university heading on the first content page, black typography/rules, and original-colour figures.
 
@@ -85,6 +86,9 @@ python scripts/select_corners.py --pair 1
 ```
 
 Click top-left, top-right, bottom-right, bottom-left, then rerun Q3.
+The current tool uses an OpenCV window (no Matplotlib GUI dependency), zooms
+to the suggested surface, and saves original-image coordinates and click events.
+Use `--all` to select both pairs in sequence. Enter saves, R resets, and Esc cancels.
 
 ## LaTeX report
 

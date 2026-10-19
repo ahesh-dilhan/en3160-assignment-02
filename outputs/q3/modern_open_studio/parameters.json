@@ -9,37 +9,37 @@
   "corners": [
     [
       215,
-      405
+      407
     ],
     [
-      953,
-      508
+      955,
+      509
     ],
     [
-      953,
-      556
+      955,
+      558
     ],
     [
       215,
-      461
+      463
     ]
   ],
   "alpha": 0.82,
-  "selection": "Manually selected from the 1600-pixel-wide photograph, TL/TR/BR/BL. Use select_corners.py to replace with mouse clicks.",
+  "selection": "Four mouse clicks using scripts/select_corners.py (OpenCV window); TL/TR/BR/BL.",
   "rationale": "A fictional open-studio banner on one planar band of a modern facade; the slanted band makes perspective visible.",
   "homography_overlay_to_background": [
     [
-      0.6410531331903742,
+      0.6264678852241397,
       0.0,
       215.0
     ],
     [
-      0.13414343578746726,
+      0.12488512202593689,
       0.21621621621621623,
-      405.0
+      407.0
     ],
     [
-      0.00011913271384322135,
+      0.00010211375472276115,
       0.0,
       1.0
     ]

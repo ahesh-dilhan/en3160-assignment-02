@@ -9,15 +9,15 @@
   "corners": [
     [
       454,
+      684
+    ],
+    [
+      783,
       683
     ],
     [
-      782,
-      683
-    ],
-    [
-      786,
-      800
+      787,
+      801
     ],
     [
       450,
@@ -25,22 +25,22 @@
     ]
   ],
   "alpha": 0.78,
-  "selection": "Manually selected within the double garage door, TL/TR/BR/BL. Use select_corners.py to replace with mouse clicks.",
+  "selection": "Four mouse clicks using scripts/select_corners.py (OpenCV window); TL/TR/BR/BL.",
   "rationale": "A fictional community-garden notice on a nearly frontal planar garage door, contrasting with the more oblique facade banner.",
   "homography_overlay_to_background": [
     [
-      0.3283283283283283,
-      -0.03137374352726165,
+      0.31620121706133475,
+      -0.031115199402328722,
       454.0
     ],
     [
-      0.0,
-      0.20885369073002336,
-      683.0
+      -0.012452470578319379,
+      0.20718112856785723,
+      684.0
     ],
     [
-      0.0,
-      -5.076657528683115e-05,
+      -1.67664269067619e-05,
+      -5.019203278698019e-05,
       1.0
     ]
   ],

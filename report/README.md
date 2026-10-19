@@ -36,5 +36,7 @@ tectonic --keep-logs --outdir ../output/pdf 230145E_a02.tex
 ```
 
 Standard LaTeX packages also permit compilation with TeX Live/MiKTeX or Overleaf.
-Q3 retains the recorded limitation that its saved corners were selected from
-visual inspection; changing the presentation does not change experimental results.
+Q3 uses four recorded mouse clicks per photograph, with original-image
+coordinates, zoom-window mapping, event timestamps, and image checksums saved
+in `assets/q3/corner_clicks.json`. The prepared Q3 results must agree with those
+clicks before a final report can be built.
