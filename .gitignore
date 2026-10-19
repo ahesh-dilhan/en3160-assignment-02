@@ -1,7 +1,4 @@
-# Local source materials and extracted data
-/en3160_assignment_02.pdf
-/a2images.zip
-/images/
+# Temporary review and build intermediates
 /tmp/
 
 # Python and editor state
@@ -14,8 +11,7 @@ __pycache__/
 .env
 .vscode/
 
-# Generated experimental outputs; select final figures deliberately
-/outputs/
+# TeX build logs (reports, figures, raw inputs and results are committed)
 /output/pdf/*.log
 /output/pdf/*.aux
 /output/pdf/*.out

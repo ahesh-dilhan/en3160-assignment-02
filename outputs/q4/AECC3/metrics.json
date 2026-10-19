@@ -1,0 +1,33 @@
+{
+  "image": "AECC3",
+  "source_keypoints": 8000,
+  "template_keypoints": 8000,
+  "ratio_threshold": 0.72,
+  "ratio_matches": 3978,
+  "ransac_inliers": 3664,
+  "inlier_ratio": 0.9210658622423328,
+  "median_reprojection_error_small_px": 0.16723889112472534,
+  "reprojection_threshold_small_px": 3.0,
+  "feature_max_side": 1600,
+  "inlier_hull_fraction_of_template": 0.5042690917281567,
+  "homography_source_to_template": [
+    [
+      0.9995090133569999,
+      -0.01000965196440934,
+      22.5160056021614
+    ],
+    [
+      0.010357462939767215,
+      0.9991717270090974,
+      -11.298102798914144
+    ],
+    [
+      -4.5796749721803936e-08,
+      1.681079360634174e-07,
+      1.0
+    ]
+  ],
+  "valid_overlap_fraction": 0.9881876883614503,
+  "raw_overlap_mae": 3.2941737278697,
+  "difference_units": "8-bit intensity, absolute per-channel difference"
+}

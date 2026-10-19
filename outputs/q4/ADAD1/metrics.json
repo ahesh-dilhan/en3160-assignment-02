@@ -1,0 +1,33 @@
+{
+  "image": "ADAD1",
+  "source_keypoints": 6275,
+  "template_keypoints": 8000,
+  "ratio_threshold": 0.72,
+  "ratio_matches": 252,
+  "ransac_inliers": 187,
+  "inlier_ratio": 0.7420634920634921,
+  "median_reprojection_error_small_px": 0.43870577216148376,
+  "reprojection_threshold_small_px": 3.0,
+  "feature_max_side": 1600,
+  "inlier_hull_fraction_of_template": 0.19408382645439237,
+  "homography_source_to_template": [
+    [
+      1.220517700057784,
+      -0.01802200745886857,
+      -53.14243383697322
+    ],
+    [
+      0.13670075978866364,
+      1.043282363267376,
+      -137.9867311604856
+    ],
+    [
+      4.851503068089345e-05,
+      2.92034934348147e-06,
+      1.0
+    ]
+  ],
+  "valid_overlap_fraction": 0.9809741807569783,
+  "raw_overlap_mae": 30.615857296036335,
+  "difference_units": "8-bit intensity, absolute per-channel difference"
+}

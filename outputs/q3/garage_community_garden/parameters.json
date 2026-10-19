@@ -1,0 +1,48 @@
+{
+  "name": "garage_community_garden",
+  "background": "assets/q3/suburban_house.jpg",
+  "poster_style": "garden",
+  "poster_size": [
+    1000,
+    470
+  ],
+  "corners": [
+    [
+      454,
+      683
+    ],
+    [
+      782,
+      683
+    ],
+    [
+      786,
+      800
+    ],
+    [
+      450,
+      800
+    ]
+  ],
+  "alpha": 0.78,
+  "selection": "Manually selected within the double garage door, TL/TR/BR/BL. Use select_corners.py to replace with mouse clicks.",
+  "rationale": "A fictional community-garden notice on a nearly frontal planar garage door, contrasting with the more oblique facade banner.",
+  "homography_overlay_to_background": [
+    [
+      0.3283283283283283,
+      -0.03137374352726165,
+      454.0
+    ],
+    [
+      0.0,
+      0.20885369073002336,
+      683.0
+    ],
+    [
+      0.0,
+      -5.076657528683115e-05,
+      1.0
+    ]
+  ],
+  "maximum_corner_error_px": 0.0
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "image": "AAAA1",
+    "source_keypoints": 2068,
+    "template_keypoints": 8000,
+    "ratio_threshold": 0.72,
+    "ratio_matches": 38,
+    "ransac_inliers": 15,
+    "inlier_ratio": 0.39473684210526316,
+    "median_reprojection_error_small_px": 0.9442954063415527,
+    "reprojection_threshold_small_px": 3.0,
+    "feature_max_side": 1600,
+    "inlier_hull_fraction_of_template": 0.10119353776468233,
+    "homography_source_to_template": [
+      [
+        1.2322133567468554,
+        -1.1204266275879438,
+        1038.3439318455203
+      ],
+      [
+        0.6611356752915761,
+        0.9725727915928737,
+        -339.086411193925
+      ],
+      [
+        3.988887518772312e-05,
+        -6.981042311512324e-05,
+        1.0
+      ]
+    ],
+    "valid_overlap_fraction": 0.8900810889081958,
+    "raw_overlap_mae": 29.307328504191965,
+    "difference_units": "8-bit intensity, absolute per-channel difference"
+  },
+  {
+    "image": "ADAD1",
+    "source_keypoints": 6275,
+    "template_keypoints": 8000,
+    "ratio_threshold": 0.72,
+    "ratio_matches": 252,
+    "ransac_inliers": 187,
+    "inlier_ratio": 0.7420634920634921,
+    "median_reprojection_error_small_px": 0.43870577216148376,
+    "reprojection_threshold_small_px": 3.0,
+    "feature_max_side": 1600,
+    "inlier_hull_fraction_of_template": 0.19408382645439237,
+    "homography_source_to_template": [
+      [
+        1.220517700057784,
+        -0.01802200745886857,
+        -53.14243383697322
+      ],
+      [
+        0.13670075978866364,
+        1.043282363267376,
+        -137.9867311604856
+      ],
+      [
+        4.851503068089345e-05,
+        2.92034934348147e-06,
+        1.0
+      ]
+    ],
+    "valid_overlap_fraction": 0.9809741807569783,
+    "raw_overlap_mae": 30.615857296036335,
+    "difference_units": "8-bit intensity, absolute per-channel difference"
+  },
+  {
+    "image": "AECC2",
+    "source_keypoints": 8000,
+    "template_keypoints": 8000,
+    "ratio_threshold": 0.72,
+    "ratio_matches": 3314,
+    "ransac_inliers": 3068,
+    "inlier_ratio": 0.9257694628847315,
+    "median_reprojection_error_small_px": 0.21019625663757324,
+    "reprojection_threshold_small_px": 3.0,
+    "feature_max_side": 1600,
+    "inlier_hull_fraction_of_template": 0.49403975337242007,
+    "homography_source_to_template": [
+      [
+        1.0005123711432247,
+        -0.01497288625613395,
+        32.068523311092285
+      ],
+      [
+        0.016528044029380393,
+        1.0000746950312274,
+        -18.21990635762494
+      ],
+      [
+        2.7537156045830407e-07,
+        2.96638755290997e-07,
+        1.0
+      ]
+    ],
+    "valid_overlap_fraction": 0.9832077855535718,
+    "raw_overlap_mae": 3.5203998642699195,
+    "difference_units": "8-bit intensity, absolute per-channel difference"
+  },
+  {
+    "image": "AECC3",
+    "source_keypoints": 8000,
+    "template_keypoints": 8000,
+    "ratio_threshold": 0.72,
+    "ratio_matches": 3978,
+    "ransac_inliers": 3664,
+    "inlier_ratio": 0.9210658622423328,
+    "median_reprojection_error_small_px": 0.16723889112472534,
+    "reprojection_threshold_small_px": 3.0,
+    "feature_max_side": 1600,
+    "inlier_hull_fraction_of_template": 0.5042690917281567,
+    "homography_source_to_template": [
+      [
+        0.9995090133569999,
+        -0.01000965196440934,
+        22.5160056021614
+      ],
+      [
+        0.010357462939767215,
+        0.9991717270090974,
+        -11.298102798914144
+      ],
+      [
+        -4.5796749721803936e-08,
+        1.681079360634174e-07,
+        1.0
+      ]
+    ],
+    "valid_overlap_fraction": 0.9881876883614503,
+    "raw_overlap_mae": 3.2941737278697,
+    "difference_units": "8-bit intensity, absolute per-channel difference"
+  },
+  {
+    "image": "AECC4",
+    "source_keypoints": 8000,
+    "template_keypoints": 8000,
+    "ratio_threshold": 0.72,
+    "ratio_matches": 3171,
+    "ransac_inliers": 2913,
+    "inlier_ratio": 0.9186376537369915,
+    "median_reprojection_error_small_px": 0.23144669830799103,
+    "reprojection_threshold_small_px": 3.0,
+    "feature_max_side": 1600,
+    "inlier_hull_fraction_of_template": 0.44427025238197027,
+    "homography_source_to_template": [
+      [
+        0.9998640146242646,
+        -0.013889841850936514,
+        31.160662006449144
+      ],
+      [
+        0.0140074527578378,
+        0.9994968195400474,
+        -14.354414370098588
+      ],
+      [
+        7.496804597124317e-08,
+        4.041267834462545e-07,
+        1.0
+      ]
+    ],
+    "valid_overlap_fraction": 0.984267860723117,
+    "raw_overlap_mae": 4.0687130135105365,
+    "difference_units": "8-bit intensity, absolute per-channel difference"
+  }
+]
